@@ -34,7 +34,7 @@ void write(CircularBuffer *cb, char data) {
     cb->count++;
 }
 
-char readBuffer(CircularBuffer *cb) {
+char read(CircularBuffer *cb) {
     if (isEmpty(cb)) {
         printf("Underflow\n");
         return '\0';
@@ -62,7 +62,7 @@ int main() {
     char result[70];
     int i = 0;
     while (!isEmpty(&cb)) {
-        result[i] = readBuffer(&cb);
+        result[i] = read(&cb);
         i++;
     }
 
