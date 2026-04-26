@@ -59,15 +59,10 @@ int main() {
         write(&cb, name[i]);
     }
 
-    char result[70];
-    int i = 0;
     while (!isEmpty(&cb)) {
-        result[i] = read(&cb);
-        i++;
+        char name = read(&cb);
+        printf("%c", name);
     }
-
-    result[i] = '\0'; 
-    printf("%s\n", result);
-
+ 
     return 0;
 }
